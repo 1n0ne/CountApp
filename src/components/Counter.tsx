@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import {plusOne, subOne, reset  } from "./counterSlice"
+import {plusOne, subOne, reset  } from "./counterSlice";
+import {RootState} from "../store";
 const Counter = () => {
 
-    const count = useSelector((state) =>(state.CounterR.count));
+    const count = useSelector((state:RootState) =>(state.CounterR.count));
     
     const dispatch = useDispatch();
     const handeladdOne = () =>{
